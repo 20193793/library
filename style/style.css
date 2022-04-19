@@ -1,0 +1,39 @@
+﻿/*Variables*/
+:root {
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0 0px 0 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.form-title {
+    padding: 1em
+}
+
+.container {
+    display:flex;
+    background-color: #ffffff;
+}
+
+.left-pane {
+    width: 320px;
+}
+
+.right-pane {
+    width: 320px;
+}
+
+.form-table td {
+    height: 2em;
+}
+
+.cat-item {
+    list-style: none;
+}
+
+
