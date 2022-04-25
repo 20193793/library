@@ -40,4 +40,7 @@ h1.form-title {
     display: flex;
 }
 
-
+.nav-tem {
+    list-style: none;
+    padding: 1em
+}

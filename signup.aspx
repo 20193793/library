@@ -1,12 +1,26 @@
-﻿<!--sjkjldajkasjdklas -->
-
+﻿<%@ Page Language="C#" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
 <!DOCTYPE html>
+
+<script runat="server">
+    SqlConnection conn = new SqlConnection();
+    conn.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|users.mdf;Integrated Security=True";
+    string strInsert = String.Format("INSERT INTO users VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", Fname, Lname, UserName, Password, Email;
+
+    SqlCommand cmdInsert = new SqlCommand(strInsert, conn);
+
+    conn.Open();
+    cmdInsert.ExecuteNonQuery();
+    ErrorMessage.Text = "Ok";
+    conn.Close();
+</script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sign Up to Badreads</title>
     <link href="style/style.css" rel="stylesheet" />
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div class="container">
@@ -22,6 +36,22 @@
                                     <tr>
                                         <td align="center" colspan="2">
                                             <h1 class="form-title">Create Account</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">
+                                            First Name</td>
+                                        <td class="auto-style2">
+                                            <asp:TextBox ID="Fname" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Fname" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td align="right">
+                                            Last Name</td>
+                                        <td class="auto-style2">
+                                            <asp:TextBox ID="Lname" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Lname" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
                                     <tr>

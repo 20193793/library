@@ -7,15 +7,9 @@
 
 <nav>
     <ul class="navbar">
-        <li>
-            <a href="home.aspx" class="nav-item">Home</a>
-        </li>
-        <li>
-            <a href="category.aspx" class="nav-item">Discover</a>
-        </li>
-        <li>
-            <a href="search.aspx" class="nav-item">Search</a>
-        </li>
+        <li><a href="home.aspx" class="nav-item">Home</a></li>
+        <li><a href="category.aspx" class="nav-item">Discover</a></li>
+        <li><a href="search.aspx" class="nav-item">Search</a></li>
     </ul>
 </nav>
 
