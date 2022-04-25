@@ -1,12 +1,27 @@
-﻿
+﻿<!DOCTYPE html>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sign Up to Badreads</title>
     <link href="style/style.css" rel="stylesheet" />
 </head>
+
+<nav>
+    <ul class="navbar">
+        <li>
+            <a href="home.aspx" class="nav-item">Home</a>
+        </li>
+        <li>
+            <a href="category.aspx" class="nav-item">Discover</a>
+        </li>
+        <li>
+            <a href="search.aspx" class="nav-item">Search</a>
+        </li>
+    </ul>
+</nav>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
 <body>
     <form id="form1" runat="server">
         <div class="container">
